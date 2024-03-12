@@ -1,22 +1,20 @@
 [
     {
-        "applicationName": "Meta",
-        "password": "1b92dbd629bb9b7093503a4592302c85",
-        "expires": "never"
-    },
-    {
-        "applicationName": "Instagram",
-        "password": "652ed0ef155a1c3fba241610281f6d2c",
-        "expires": "never"
-    },
-    {
-        "applicationName": "Reddit",
-        "password": "f41223ca4825e10e8aeb0a78ea5919c1",
-        "expires": "never"
+        "applicationName": "Snapchat",
+        "password": "a1cd9f1577e012b2cba8da866eabb94c",
+        "expires": "never",
+        "id": 1
     },
     {
         "applicationName": "Google",
-        "password": "752becaca69e9cf71482685fdcff018d",
-        "expires": "never"
+        "password": "4bc31078f6f0021db7905604d216fb41",
+        "expires": "never",
+        "id": 2
+    },
+    {
+        "applicationName": "Facebook",
+        "password": "4d29299fbc9b81b7ca1693859a53fd3a",
+        "expires": "never",
+        "id": 3
     }
 ]

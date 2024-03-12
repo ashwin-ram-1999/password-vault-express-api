@@ -5,9 +5,6 @@ import { Password } from "../model/passwordStructure";
 
 const filename = path.resolve(__dirname, process.env.FILENAME || FILENAME);
 
-console.log(filename);
-console.log(fs.existsSync(filename));
-
 export const createOrModifyFile = () => {
   const contents: string = fs.readFileSync(filename, "utf8");
   const dataArray: object[] = contents.length === 0 ? [] : JSON.parse(contents);
@@ -29,4 +26,18 @@ export const readFileOutput = (): Password[] => {
     fs.readFileSync(filename, "utf8")
   );
   return passwordArray;
+};
+
+export const getCurrentId = (): number => {
+  const filename: string = path.resolve(
+    __dirname,
+    process.env.FILENAME || FILENAME
+  );
+  let fileContents: string = fs.readFileSync(filename, "utf8");
+  let passwordArray: Password[] =
+    fileContents.length === 0 ? [] : JSON.parse(fileContents);
+  let currentId: number =
+    passwordArray.length > 0 ? passwordArray[passwordArray.length - 1].id : 0;
+  console.log(currentId, "-> currentId");
+  return currentId;
 };

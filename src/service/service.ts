@@ -3,17 +3,26 @@ import dotenv from "dotenv";
 import {
   appendObjectToFile,
   createOrModifyFile,
+  getCurrentId,
   readFileOutput,
 } from "../handler/fileHandler";
 import { Password } from "../model/passwordStructure";
 
 dotenv.config();
 
-export const savePassword = (passwordObject: Password) => {
+let currentId: number = getCurrentId();
+
+export const savePassword = (passwordObject: Password): Password => {
   const array: object[] = createOrModifyFile();
 
-  passwordObject["password"] = encryptData(passwordObject.password);
-  array.push(passwordObject);
+  currentId++;
+  let updatedWithId: Password = {
+    ...passwordObject,
+    id: currentId,
+  };
+
+  updatedWithId["password"] = encryptData(updatedWithId.password);
+  array.push(updatedWithId);
 
   appendObjectToFile(array);
 
@@ -23,3 +32,5 @@ export const savePassword = (passwordObject: Password) => {
 export const getAllPasswords = (): Password[] => {
   return readFileOutput();
 };
+
+// export const getPasswordById = (): Password => {};
