@@ -20,7 +20,10 @@ app.post("/save", (req: Request, res: Response) => {
   if (validateRequest(req)) {
     const saved: object = savePassword(req.body);
     res.status(201).send(saved);
-  } else res.status(400).send("Request Body is not valid");
+  } else
+    res
+      .status(400)
+      .send({ status: "Error", message: "Request Body is not valid" });
 });
 
 app.listen(port, () => {

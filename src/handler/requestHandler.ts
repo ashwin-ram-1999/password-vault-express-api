@@ -13,7 +13,11 @@ function allKeysPresent(obj: Any): boolean {
   }
   // Check if all keys are present and non-null/undefined
   return requestBodyArray.every(
-    (key) => key in obj && obj[key] !== null && obj[key] !== undefined
+    (key) =>
+      key in obj &&
+      obj[key] !== null &&
+      obj[key] !== undefined &&
+      obj[key] !== ""
   );
 }
 
