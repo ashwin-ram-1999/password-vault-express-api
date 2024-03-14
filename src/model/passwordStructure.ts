@@ -1,6 +1,6 @@
 export interface Password {
   id: number;
-  name: string;
+  website: string;
+  username: string;
   password: string;
-  expires: string;
 }

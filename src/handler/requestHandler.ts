@@ -4,7 +4,7 @@ interface Any {
   [key: string]: any;
 }
 
-const requestBodyArray: string[] = ["applicationName", "password", "expires"];
+const requestBodyArray: string[] = ["website", "password", "username"];
 
 function allKeysPresent(obj: Any): boolean {
   // Check for exactly 3 keys

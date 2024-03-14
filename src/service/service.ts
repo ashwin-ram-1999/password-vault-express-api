@@ -16,9 +16,12 @@ export const savePassword = (passwordObject: Password): Password => {
   const array: object[] = createOrModifyFile();
 
   currentId++;
+
   let updatedWithId: Password = {
-    ...passwordObject,
     id: currentId,
+    website: passwordObject.website,
+    username: passwordObject.username,
+    password: passwordObject.password,
   };
 
   updatedWithId["password"] = encryptData(updatedWithId.password);
@@ -26,7 +29,7 @@ export const savePassword = (passwordObject: Password): Password => {
 
   appendObjectToFile(array);
 
-  return passwordObject;
+  return updatedWithId;
 };
 
 export const getAllPasswords = (): Password[] => {

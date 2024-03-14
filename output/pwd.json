@@ -1,20 +1,14 @@
 [
     {
-        "applicationName": "Snapchat",
-        "password": "a1cd9f1577e012b2cba8da866eabb94c",
-        "expires": "never",
-        "id": 1
+        "id": 1,
+        "website": "example.com",
+        "username": "user@example.com",
+        "password": "6ecfcce14f904a138789c1b6748ddf489934f626cda088199a6c840f1f28dae0"
     },
     {
-        "applicationName": "Google",
-        "password": "4bc31078f6f0021db7905604d216fb41",
-        "expires": "never",
-        "id": 2
-    },
-    {
-        "applicationName": "Facebook",
-        "password": "4d29299fbc9b81b7ca1693859a53fd3a",
-        "expires": "never",
-        "id": 3
+        "id": 2,
+        "website": "instagram.com",
+        "username": "user@email.com",
+        "password": "6188e1836000ba2c673aa62953141f10bb1b43a9e2f99ac6f4c8431a90d0f1e0"
     }
 ]
