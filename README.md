@@ -63,9 +63,10 @@ Response:
 HTTP 201 Created
 
 {
+    "id": 1
     "website": "example.com",
     "username": "user@example.com",
-    "password": "plain_text_password"
+    "password": "encrypted_password"
 }
 
 ```
